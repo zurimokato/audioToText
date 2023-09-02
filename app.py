@@ -5,6 +5,7 @@ from flask import Flask, redirect, render_template, request, url_for
 
 app = Flask(__name__)
 model = whisper.load_model("medium")
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 @app.route("/", methods=("GET", "POST"))
@@ -33,7 +34,6 @@ def transcribe():
 
 
 def resume_text(text):
-    openai.api_key = "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"
     respuesta = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         temperature=0.7,  # Controla la creatividad del modelo (0.2 a 1.0)
