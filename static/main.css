@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e87c7c;
+  background-image: url(https://nordicapis.com/wp-content/uploads/5-Best-Speech-to-Text-APIs-2-e1615383933700.png);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  height: 100vh;
+}
+
+input[type="file"] {
+  display: none; /* Oculta el input file nativo */
+}
+
+#uploadButton {
+  position: relative;
+  margin-left: 400px; /* Ajusta el margen izquierdo según tus necesidades */
+  margin-top: 10px;
+}
+.custom-file-input {
+  background-color: #4CAF50; /* Color de fondo del botón */
+  color: white; /* Color del texto en el botón */
+  padding: 10px 20px; /* Espaciado interno (arriba/abajo, izquierda/derecha) */
+  font-size: 16px; /* Tamaño de fuente del texto */
+  border: none; /* Elimina el borde del botón */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón por encima */
+  border-radius: 5px; /* Bordes redondeados del botón */
+}
+.custom-file-input:hover {
+  background-color: #45a049; /* Cambia el color de fondo al pasar el ratón por encima */
+}
+.file-input-container {
+  position: relative; /* Establece la posición relativa para posicionar el botón personalizado */
+}
+.selected-file-text {
+  margin-top: 10px; /* Espaciado superior para separarlo del botón */
+}
+/* Estilos para el cuadro de carga de archivos */
+#audioInput {
+  margin-bottom: 40px;
+}
+
+/* Estilos para el cuadro de transcripción */
+#transcription {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8); 
+  width: 400px;
+  max-width: 100%;
+  text-align: left;
+}

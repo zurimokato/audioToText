@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONVERSION DE AUDIO A TEXTO</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+
+  <h1>Conversión de voz a texto</h1>
+  <form id="uploadForm" action="/transcribe" method="POST" enctype="multipart/form-data">
+      <input type="file" name="audio"  id="audioInput">
+      <input type="button" value="Cargar archivo" id="uploadButton">
+      <input type="submit" value="Transcribir" >
+  </form>
+  <div id="transcriptionResult"></div>
+  
+  <div class="file-input-container">
+      <label class="custom-file-input" for="audioInput">Seleccionar archivo de audio</label>
+      <input type="file"name="audio"  id="audioInput">
+  </div>
+  <p class="selected-file-text">Ningún archivo seleccionado</p>
+
+  <input type="file"  id="audioInput">
+  {% if result %}
+    <div id="transcription">{{ result }}</div>
+  {% endif %}
+</body>
